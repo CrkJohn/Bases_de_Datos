@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE Perfil [
+	<!ELEMENT Perfil (estudios?,trabajos?,proyectos?)>
+	
+	<!ELEMENT estudios (estudio*)>
+	<!ELEMENT estudio (universidad,fecha)>
+	<!ATTLIST estudio	
+		nombre CDATA #REQUIRED>
+	<!ELEMENT universidad (#PCDATA)>
+	<!ATTLIST universidad
+		nombre CDATA #REQUIRED
+		pais CDATA #REQUIRED
+		ciudad CDATA #REQUIRED>
+	<!ELEMENT fecha (#PCDATA)>
+	<!ATTLIST fecha	
+		inicio CDATA #REQUIRED
+		fin CDATA #IMPLIED>
+	<!ELEMENT trabajos (trabajo*)>
+	<!ATTLIST trabajo 
+		cargo CDATA #REQUIRED>
+	<!ELEMENT trabajo (empresa,fecha)>
+	<!ELEMENT empresa (#PCDATA)>
+	<!ATTLIST empresa
+		nombre CDATA #REQUIRED
+		pais CDATA #REQUIRED
+		ciudad CDATA #REQUIRED>
+	<!ELEMENT proyectos (proyecto*)>
+	<!ELEMENT proyecto (fecha,pagina?,detalle?)>
+	<!ATTLIST proyecto
+		nombre CDATA #REQUIRED
+		tema CDATA #REQUIRED>
+	<!ELEMENT pagina (#PCDATA)>
+	<!ATTLIST pagina	
+		nombre CDATA #REQUIRED
+		url CDATA #REQUIRED>
+	<!ELEMENT detalle (#PCDATA)>
+]>
